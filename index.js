@@ -9,12 +9,13 @@ form.addEventListener('submit', (event) => {
   event.preventDefault()
 
   const userObj = {
-    username: username.value,
-    password: password.value,
-    bio: bio.value,
-    avatar: avatar.value,
+    user: {
+      username: username.value,
+      password: password.value,
+      bio: bio.value,
+      avatar: avatar.value,
+    },
   }
-  // debugger
   fetch('http://localhost:3000/api/v1/users', {
     method: 'POST',
     headers: {
@@ -25,4 +26,6 @@ form.addEventListener('submit', (event) => {
   })
     .then((response) => response.json())
     .then((data) => console.log(data))
+
+    form.reset()
 })

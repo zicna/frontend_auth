@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend-auth</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div>
-        <h2>Create new account</h2>
-        <form id="new-acc-form">
-            <div>
-                <input type="text" placeholder="username" id="username">
-            </div>
-            <div>
-                <input type="password" placeholder="password" id="password">
-            </div>
-            <div>
-                <input type="text" placeholder="bio" id="bio">
-            </div>
-            <div>
-                <input type="text" placeholder="avatar" id="avatar">
-            </div>
-            <div>
-                <input type="submit" value="Submit" id="btn-submit">
-            </div>
-        </form>
+      <h2>Create new account</h2>
+      <form id="new-acc-form">
+        <div>
+          <input type="text" placeholder="username" id="username" required />
+        </div>
+        <div>
+          <input
+            type="password"
+            placeholder="password"
+            id="password"
+            required
+          />
+        </div>
+        <div>
+          <input type="text" placeholder="bio" id="bio" required />
+        </div>
+        <div>
+          <input type="text" placeholder="avatar" id="avatar" required />
+        </div>
+        <div>
+          <input type="submit" value="Submit" id="btn-submit" required />
+        </div>
+      </form>
     </div>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
