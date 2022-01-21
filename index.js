@@ -25,7 +25,11 @@ form.addEventListener('submit', (event) => {
     body: JSON.stringify(userObj),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data)
+      localStorage.setItem('jwt', data.jwt)
+      // setUser(data.user)
+    })
 
-    form.reset()
+  form.reset()
 })
